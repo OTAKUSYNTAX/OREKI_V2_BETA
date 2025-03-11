@@ -1,0 +1,31 @@
+{
+  "name": "OREKI V2 BETA",
+  "description": "A cutting-edge WhatsApp bot by Thug TECHIES, designed for automation and enhanced user interaction.",
+  "logo": "https://i.imgur.com/GOO1Riz.jpeg",
+  "keywords": ["bot", "WhatsApp", "JavaScript", "automation", "chatbot"],
+  "success_url": "/",
+  "stack": "heroku-24",
+  "env": {
+    "SESSION_ID": {
+      "description": "Enter your SESSION_ID here to authenticate the bot session.",
+      "value": ""
+    },
+    "PREFIX": {
+      "description": "Define the bot's command prefix. Options: `all`, `.`, `.*!`",
+      "value": "."
+    },
+    "OWNER_NUMBER": {
+      "description": "List of administrator phone numbers (international format without `+`, separate multiple numbers with a comma).",
+      "value": "2347079059033"
+    },
+    "PUBLIC": {
+      "description": "Set the bot's accessibility mode. Options: `public` (everyone) or `private` (admin-only).",
+      "value": "public"
+    },
+    "AUTHOR": {
+      "description": "Define the author name for the bot's sticker pack.",
+      "value": "★⃝ꪶ‎ꪻꫝꪊᧁ 🦄⃤𖥘✪͜͡➺",
+      "required": false
+    }
+  }
+}
