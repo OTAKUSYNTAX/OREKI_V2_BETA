@@ -1,0 +1,76 @@
+{
+  "bot-name": "OREKI V2 BETA",
+  "description": "Premium bot with tons of features",
+  "logo": "https://i.imgur.com/GOO1Riz.jpeg",
+  "keywords": ["bot"],
+  "documentation-link": "alexwan578@gmail.com",
+  "owner-verification": "wisdomoseghale98@gmail.com",
+
+  "env": {
+    "SESSION_ID": {
+      "description": "Put your SESSION_ID here or get session id from here, https://oreki-sessions.onrender.com",
+      "value": "",
+      "required": true
+    },
+    "OWNER_NUMBER": {
+      "description": "OWNER_NUMBER with country code (e.g, 9230723xxxxx)",
+      "value": "2347079059033",
+      "required": true
+    },
+    "OWNER_NAME": {
+      "description": "Owner's name",
+      "value": "David Cyril",
+      "required": true
+    },
+    "PACK_NAME": {
+      "description": "Sticker Pack name",
+      "value": "★⃝ꪶ‎ꪻꫝꪊᧁ △❄⚝➪",
+      "required": false
+    },
+    "AUTHOR": {
+      "description": "Specify the Sticker Pack author name.",
+      "value": "★⃝ꪶ‎ꪻꫝꪊᧁ △❄⚝➪",
+      "required": false
+    },
+    "LOCATION": {
+      "description": "Bot's location",
+      "value": "Africa, Nigeria, Delta state",
+      "required": false
+      },
+    "THEMEEMOJI": {
+      "description": "Theme emoji",
+      "value": "🌼",
+      "required": false
+    },
+    "WM": {
+      "description": "Watermark(Your name)",
+      "value": "★⃝ꪶ‎ꪻꫝꪊᧁ △❄⚝➪",
+      "required": false
+    },
+    "CREATOR": {
+      "description": "Creator's contact",
+      "value": "2347079059033@s.whatsapp.net",
+      "required": false
+    },
+    "PREFIX": {
+      "description": "Bot command prefix (e.g., . , ! @ etc.)",
+      "value": ".",
+      "required": true
+    },
+    "PREMIUM_USERS": {
+      "description": "Premium users' numbers without +, separated by commas",
+      "value": "2347079059033",
+      "required": false
+    },
+    "AUTOBLOCKNUMBER": {
+      "description": "Auto block number feature",
+      "value": "",
+      "required": false
+    },
+    "ANTIFOREIGNNUMBER": {
+      "description": "Enable or disable anti-foreign number blocking",
+      "value": "",
+      "required": false
+    }
+  }
+}
