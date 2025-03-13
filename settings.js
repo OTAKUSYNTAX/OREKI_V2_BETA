@@ -1,54 +1,5 @@
-require('dotenv').config();
 const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-
-const ENV_FILE_PATH = path.join(__dirname, '.env');
-const SESSION_FOLDER_PATH = path.join(__dirname, 'session');
-const CREDS_FILE_PATH = path.join(SESSION_FOLDER_PATH, 'creds.json');
-
-// Ensure session folder exists
-if (!fs.existsSync(SESSION_FOLDER_PATH)) {
-    fs.mkdirSync(SESSION_FOLDER_PATH, { recursive: true });
-}
-
-// Fetch SESSION_ID from environment variables (TalkDove)
-let sessionId = process.env.SESSION_ID || null;
-
-// Function to save SESSION_ID to creds.json
-const saveSessionToCreds = (sessionId) => {
-    if (!sessionId) {
-        console.log(chalk.red("❌ No SESSION_ID provided!"));
-        return;
-    }
-
-    const sessionData = { SESSION_ID: sessionId };
-    fs.writeFileSync(CREDS_FILE_PATH, JSON.stringify(sessionData, null, 4));
-    console.log(chalk.green("✅ SESSION_ID stored in creds.json!"));
-};
-
-// Monitor .env file for SESSION_ID changes
-fs.watch(ENV_FILE_PATH, (eventType, filename) => {
-    if (eventType === 'change') {
-        require('dotenv').config(); // Reload environment variables
-        let newSessionId = process.env.SESSION_ID || null;
-
-        if (newSessionId && newSessionId !== sessionId) {
-            sessionId = newSessionId;
-            saveSessionToCreds(sessionId);
-        }
-    }
-});
-
-// Initial save when bot starts
-if (sessionId) {
-    saveSessionToCreds(sessionId);
-} else {
-    console.log(chalk.yellow("⚠ Waiting for SESSION_ID input..."));
-}
 global.location = "Africa,Nigeria,Delta state" //ur location
-
-
 
 global.socialm = "IG:"
 
